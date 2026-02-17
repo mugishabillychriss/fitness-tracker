@@ -15,7 +15,7 @@ app.config["JWT_SECRET_KEY"] = "super-secret-key-change-this"
 bcrypt = Bcrypt(app)
 jwt = JWTManager(app)
 
-DATABASE_URL = os.getenv("DATABASE_URL")
+DATABASE_URL = os.getenv("postgresql://fittrack_db_b99j_user:mzesyWNMRy9WD40hx2dBHKUt2FsVs0si@dpg-d6af98vgi27c73b6jbs0-a/fittrack_db_b99j")
 
 def get_db():
     return psycopg2.connect(DATABASE_URL, cursor_factory=RealDictCursor)
